@@ -1,0 +1,443 @@
+body{
+    background-color: rgb(0, 0, 0);
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.header{
+    text-align: center;
+    background-color: #fff;
+    width: 100%;
+}
+
+.content{
+    background-color: rgb(244, 244, 244);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+footer {    
+    background-color: #333;
+    padding: 1rem 0;
+    padding: 7.5px;
+    position: relative;
+    width: 100%; 
+    text-align: center;
+
+}
+
+.container {
+    background-color: rgb(244, 244, 244);
+    max-width: 1200px;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:#fff;
+    color:#fff;
+    padding: 1rem;
+    margin-top: 15px;
+    /* margin-bottom: 5px; */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0; /* Reset margin ul menjadi 0 */
+    padding: 0;
+}
+
+.nav-links li {
+    margin-right: 100px; /* Atur jarak antara item navigasi */
+    margin-bottom: 10px;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+    /*Menu Burger*/
+
+    .burger{
+        display: none;
+        flex-direction: column;
+        height: 24px;
+        /* background-color: aqua; */
+        justify-content: space-between;
+        position: relative;
+        right: -225px;
+    }
+    
+    .burger input{
+        position: absolute ;
+        width: 50px;
+        height: 26px;
+        left: -12px;
+        top: -1px;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 2;
+    
+    }
+    
+    .burger span{
+        display: block;
+        width: 25px;
+        height: 4px;
+        background-color: #676666;
+        border-radius: 3px;
+        transition: all 0.5s;
+    }
+    
+    /* Humberger Animation*/
+    
+    .burger span:nth-child(2){
+        transform-origin: 0 0;
+    }
+    
+    .burger span:nth-child(4){
+        transform-origin: 0 100%;
+    }
+    
+    .burger input:checked ~ span:nth-child(2){
+        background-color: black;
+        transform: rotate(45deg) translate(5px, -3px);
+    }
+    
+    .burger input:checked ~ span:nth-child(4){
+        background-color: black;
+        transform: rotate(-45deg) translate(5px, 2px);
+    }
+    
+    .burger input:checked ~ span:nth-child(3){
+        transform: scale(0);
+        opacity: 0;
+    }
+
+.band-info{
+    padding: 2rem 0;
+    color: #333;
+    width: 100%;
+    align-items: center;
+    
+}
+.band-info h1{
+    color: #333;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.band-info h2{
+    font-size: 20px;
+    color: #333;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.band-info .band-image {
+   float: none;
+   display: flex;
+   width: 100%;
+}
+.band-info .img1 {
+    margin: 0;
+    width: 42.2%;
+    height: 80%;
+    border: 20px solid #802323;
+}
+
+.band-info .img2 {
+    margin: 0;
+    padding: 0;
+    width: 51.1%;
+    height: 80%;
+    border: 20px solid #484848;
+}
+
+
+.band-info p{
+    font-size: 20px; /* Atur ukuran font untuk elemen p */
+    line-height: 1.5; 
+    margin-bottom: 8px; 
+    color: #333;
+    font-family: garamond;
+}
+
+.band-info .daftar{
+    font-size: 20px; /* Atur ukuran font untuk elemen p */
+    line-height: 1.5; /* Atur jarak antara baris (line height) */
+    margin-bottom: 10px; 
+    color: #333;
+    font-family: garamond;
+}
+
+.band-info table,td{
+    
+    border: 2px solid #333;
+    border-collapse: collapse;
+}
+table{
+    width: 100%;
+    background-color: #efefef;
+}
+
+table .baris1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+table td{
+    text-align: center;
+    height: 60px;
+}
+
+table a{
+    text-decoration: none;
+    list-style: none;
+    color: #333;
+}
+.Menang{
+    background-color: rgb(117, 209, 117);
+}
+
+.nominasi{
+    background-color: blanchedalmond;
+}
+
+
+.footer .social-media img{
+    margin: 30px;
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+.footer p{
+    text-transform: arial;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .content{
+        width: 100%;
+    }
+
+    .nav-links{
+        width: 100%;
+    }
+    .burger{
+        display: flex;
+        right: -300px;
+    }
+    .nav-links{
+        position: absolute;
+        top: 157px;
+        width: 100%;
+        height: 70vh;
+        padding-bottom: 90px;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        background-color:#f6f6f6;
+        z-index: 0;
+        transform: translateX(100%);
+        transition: all 1s;
+    }
+
+
+    .nav-links li{
+        margin-left: 120px;
+        margin-top: 102px;
+    }
+    .nav-links.slide{
+
+        transform: translateX(0);
+    }
+    .band-info .band-image {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 15%;
+     }
+    .band-info .img1 {
+        width: 100%;
+        height: 100%;
+        border: 10px solid #333;
+    }
+    
+    .band-info .img2 {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        border: 10px solid #333;
+    }
+    
+    .band-info p{
+        text-align: left;
+    }
+    .band-info h1{
+        text-align: center;
+        margin-bottom: 10%;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    
+    .burger{
+        display: flex;
+        right: -200px;
+    }
+    .nav-links{
+        position: absolute;
+        top: 157px;
+        width: 100%;
+        height: 70vh;
+        padding-bottom: 90px;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        background-color:#f6f6f6;
+        z-index: 0;
+        transform: translateX(100%);
+        transition: all 1s;
+    }
+
+    .nav-links li{
+        margin-left: 100px;
+        margin-top: -10px;
+    }
+    .nav-links.slide{
+
+        transform: translateX(0);
+    }
+
+    .band-info .band-image {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 20%;
+     }
+    .band-info .img1 {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        border: 10px solid #333;
+    }
+    
+    .band-info .img2 {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        border: 10px solid #333;
+    }
+
+
+    .band-info h1{
+        text-align: center;
+        padding-bottom: 10%;
+    }
+    .band-info p{
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 412px) {
+    
+    .burger{
+        display: flex;
+        right: -150px;
+    }
+    .nav-links{
+        position: absolute;
+        right: -1px;
+        top: 157px;
+        width: 100%;
+        height: 80vh;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        background-color:#f6f6f6;
+        z-index: 0;
+        transform: translateX(100%);
+        transition: all 1s;
+    }
+
+    .nav-links li{
+        margin-left: 80px;
+        margin-top: -10px;
+    }
+    .nav-links.slide{
+
+        transform: translateX(0);
+    }
+
+    .band-info .band-image {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 10%;
+     }
+    .band-info .img1 {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        border: 10px solid #333;
+    }
+    
+    .band-info .img2 {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        border: 10px solid #333;
+    }
+
+    table{
+        width: 90%;
+        background-color: #efefef;
+    }
+    
+    table .baris1{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        text-align: left;
+    }
+    table td{
+        font-size: 14.5px;
+        text-align: center;
+        height: 60px;
+    }
+
+    .band-info h1{
+        text-align: center;
+    }
+    .band-info .daftar,h2{
+        text-align: left;
+    }
+    .band-info p{
+        text-align: left;
+    }
+
+}
